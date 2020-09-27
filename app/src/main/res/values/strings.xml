@@ -1,3 +1,8 @@
 <resources>
-    <string name="app_name">PI4</string>
+    <string name="app_name">Gamer Shopping</string>
+
+    <string name="open">Abrir menu</string>
+    <string name="close">Fechar Menu</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
