@@ -1,8 +1,13 @@
 <resources>
-    <string name="app_name">Gamer Shopping</string>
+    <string name="app_name">Gamer Shop</string>
 
     <string name="open">Abrir menu</string>
     <string name="close">Fechar Menu</string>
     <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="home">Principal</string>
+    <string name="jogos">Jogos</string>
+    <string name="plataformas">Plataformas</string>
+    <string name="maisVendidos">Mais Vendidos</string>
+    <string name="verTodos">Ver Todos</string>
+    <string name="lancamentos">Lançamentos</string>
 </resources>

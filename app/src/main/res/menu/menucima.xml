@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/menuProcurar"
+        android:icon="@drawable/ic_search_black_24dp"
+        android:title="Procurar"
+        app:actionViewClass="android.widget.SearchView"
+        app:showAsAction="ifRoom" />
+    <item
+        android:id="@+id/menuCarrinho"
+        android:checkable="true"
+        android:enabled="true"
+        android:icon="@drawable/carrinho"
+        android:title="Carrinho"
+        android:visible="true"
+        app:showAsAction="ifRoom" />
+    <item
+        android:id="@+id/menuConta"
+        android:checkable="true"
+        android:enabled="true"
+        android:icon="@drawable/conta"
+        android:title="Conta"
+        android:visible="true"
+        app:showAsAction="ifRoom" />
+</menu>

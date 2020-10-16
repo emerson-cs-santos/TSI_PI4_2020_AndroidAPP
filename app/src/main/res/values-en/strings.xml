@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Gamer Shop</string>
+    <string name="open">Open menu</string>
+    <string name="close">Close menu</string>
+    <string name="home">Home</string>
+    <string name="jogos">Games</string>
+    <string name="plataformas">Platforms</string>
+    <string name="maisVendidos">Best sellers</string>
+    <string name="verTodos">See all</string>
+    <string name="lancamentos">Releases</string>
+</resources>

@@ -4,13 +4,13 @@
     <group android:checkableBehavior="none" >
         <item
             android:id="@+id/principal"
-            android:icon="@android:drawable/ic_lock_idle_low_battery"
-            android:title="Home" />
+            android:icon="@drawable/home"
+            android:title="@string/home" />
         <item
             android:id="@+id/jogos"
             android:checkable="false"
-            android:icon="@android:drawable/ic_dialog_info"
-            android:title="Jogos"
+            android:icon="@drawable/videogames"
+            android:title="@string/jogos"
             android:visible="true" />
     </group>
 </menu>

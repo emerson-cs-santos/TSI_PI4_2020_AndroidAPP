@@ -20,6 +20,7 @@
         android:layout_height="match_parent"
         android:layout_gravity="start"
         app:headerLayout="@layout/menu_cabecalho"
+        app:itemTextColor="#E88A02"
         app:menu="@menu/menu">
 
     </com.google.android.material.navigation.NavigationView>
