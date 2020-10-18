@@ -24,30 +24,76 @@ class MainActivity : AppCompatActivity() {
             it.syncState()
         }
 
-        this.carregarTela1()
+        this.carregarMainFragment()
 
         navigationView.setNavigationItemSelectedListener {
             drawerLayout.closeDrawers()
 
             if ( it.itemId == R.id.principal )
             {
-                this.carregarTela1()
+                this.carregarMainFragment()
                 true
             }
 
             if ( it.itemId == R.id.jogos )
             {
-                val fra2 = listProdFrag.newInstance("main")
+                val fra2 = ProdutoListaFragment.newInstance("main", getString(R.string.jogos), 0)
                 supportFragmentManager.beginTransaction().replace(R.id.fragContainer, fra2).commit()
+            }
+
+            if ( it.itemId == R.id.plataformas )
+            {
+                val fra3 = CategoriaFragment.newInstance()
+                supportFragmentManager.beginTransaction().replace(R.id.fragContainer, fra3).commit()
+            }
+
+            if ( it.itemId == R.id.lancamentos )
+            {
+                val frag = ProdutoListaFragment.newInstance( "lancamentos", getString(R.string.lancamentos), 0 )
+                supportFragmentManager.beginTransaction().replace(R.id.fragContainer, frag).commit()
+            }
+
+            if ( it.itemId == R.id.maisvendidos )
+            {
+                val frag = ProdutoListaFragment.newInstance( "maisvendidos", getString(R.string.maisVendidos), 0 )
+                supportFragmentManager.beginTransaction().replace(R.id.fragContainer, frag).commit()
+            }
+
+            if ( it.itemId == R.id.carrinho )
+            {
+                this.carregarCarrinhoFragment()
+            }
+
+            if ( it.itemId == R.id.conta )
+            {
+                this.carregarContaFragment()
+            }
+
+            if ( it.itemId == R.id.sobre )
+            {
+                val frag = SobreFragment.newInstance()
+                supportFragmentManager.beginTransaction().replace(R.id.fragContainer, frag).commit()
             }
 
             false
         }
     }
 
-    fun carregarTela1()
+    private fun carregarMainFragment()
     {
-        val frag = FragMain.newInstance()
+        val frag = MainFragment.newInstance()
+        supportFragmentManager.beginTransaction().replace(R.id.fragContainer, frag).commit()
+    }
+
+    private fun carregarCarrinhoFragment()
+    {
+        val frag = CarrinhoFragment.newInstance()
+        supportFragmentManager.beginTransaction().replace(R.id.fragContainer, frag).commit()
+    }
+
+    private fun carregarContaFragment()
+    {
+        val frag = PerfilFragment.newInstance()
         supportFragmentManager.beginTransaction().replace(R.id.fragContainer, frag).commit()
     }
 
@@ -57,22 +103,18 @@ class MainActivity : AppCompatActivity() {
         return super.onCreateOptionsMenu(menu)
     }
 
-
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
 
         // Opções do menu de cima
         if ( item.itemId == R.id.menuCarrinho )
         {
-            this.carregarTela1() // Temporário, apenas carregando esse fragmento para testar se a opção funciona
-            return super.onOptionsItemSelected(item)
+            this.carregarCarrinhoFragment()
         }
 
         if ( item.itemId == R.id.menuConta )
         {
-            this.carregarTela1() // Temporário, apenas carregando esse fragmento para testar se a opção funciona
-            return super.onOptionsItemSelected(item)
+            this.carregarContaFragment()
         }
-
 
         // Ações das opções da navigationview
         toggle?.let {

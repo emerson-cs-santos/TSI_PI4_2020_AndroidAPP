@@ -6,7 +6,18 @@
     <string name="home">Home</string>
     <string name="jogos">Games</string>
     <string name="plataformas">Platforms</string>
-    <string name="maisVendidos">Best sellers</string>
+    <string name="maisVendidos">Best Sellers</string>
     <string name="verTodos">See all</string>
     <string name="lancamentos">Releases</string>
+    <string name="carrinho">Cart</string>
+    <string name="finalizarCompra">Checkout</string>
+    <string name="conta">Account</string>
+    <string name="procurar">Search for</string>
+    <string name="subtotal">Subtotal</string>
+    <string name="pedido">Order</string>
+    <string name="valortotal">Amount</string>
+    <string name="data">Date</string>
+    <string name="editarPerfil">Edit profile</string>
+    <string name="trocarSenha">Change Password</string>
+    <string name="sobre">About</string>
 </resources>

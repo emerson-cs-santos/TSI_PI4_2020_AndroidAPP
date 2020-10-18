@@ -1,16 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_margin="16dp"
+    android:layout_marginTop="16dp"
+    app:cardBackgroundColor="#FFFFFF"
     app:cardCornerRadius="5dp"
     app:cardElevation="5dp">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp"
         android:orientation="vertical">
 
         <LinearLayout
@@ -23,7 +27,7 @@
                 android:layout_width="5dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="Pedido"
+                android:text="@string/pedido"
                 android:textAlignment="viewStart" />
 
             <TextView
@@ -31,15 +35,15 @@
                 android:layout_width="5dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:text="Valor Total"
+                android:text="@string/valortotal"
                 android:textAlignment="viewStart" />
 
             <TextView
                 android:id="@+id/textView16"
-                android:layout_width="2dp"
+                android:layout_width="5dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:text="Data"
+                android:text="@string/data"
                 android:textAlignment="viewStart" />
         </LinearLayout>
 
@@ -58,7 +62,7 @@
                 android:textAlignment="viewStart" />
 
             <TextView
-                android:id="@+id/tvPerfilPedidosPreco"
+                android:id="@+id/tvPerfilPedidosValor"
                 android:layout_width="5dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -68,7 +72,7 @@
 
             <TextView
                 android:id="@+id/tvPerfilPedidosData"
-                android:layout_width="2dp"
+                android:layout_width="5dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:text="12/08/2020"

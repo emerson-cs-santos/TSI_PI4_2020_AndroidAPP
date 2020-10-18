@@ -9,11 +9,10 @@ import android.view.View
 import android.view.ViewGroup
 import kotlinx.android.synthetic.main.fragment_frag_main.*
 import kotlinx.android.synthetic.main.fragment_frag_main.view.*
-import kotlinx.android.synthetic.main.fragment_list_prod.*
 import kotlinx.android.synthetic.main.lancamentos_mais_vendidos_produto.view.*
 import kotlinx.android.synthetic.main.maincategoria.view.*
 
-class FragMain : Fragment() {
+class MainFragment : Fragment() {
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -22,25 +21,20 @@ class FragMain : Fragment() {
 
         val fragmento = inflater.inflate(R.layout.fragment_frag_main, container, false)
 
-        fragmento.btnTesteAbrirProd.setOnClickListener {
-            val i = Intent(activity, ProdutoActivity::class.java)
-            startActivity(i)
-        }
-
         // Carregar lista de categorias
         fragmento.tvCategoriasVerTodos.setOnClickListener {
-             //   val fra2 = listProdFrag.newInstance("CAT")
-           //   activity?.supportFragmentManager?.beginTransaction()?.replace(R.id.fragContainer, fra2)?.commit()
+            val frag = CategoriaFragment.newInstance()
+            activity?.supportFragmentManager?.beginTransaction()?.replace(R.id.fragContainer, frag)?.commit()
         }
 
         // Abrir Fragmento de lista de produtos, mas exibindo lançamentos
         fragmento.tvLancamentosVerTodos.setOnClickListener {
-            this.listaProdutos("lancamentos")
+            this.listaProdutos("lancamentos", getString(R.string.lancamentos), 0)
         }
 
         // Abrir Fragmento de lista de produtos, mas exibindo mais vendidos
         fragmento.tvMaisVendidosVerTodos.setOnClickListener {
-            this.listaProdutos("maisvendidos")
+            this.listaProdutos("maisvendidos", getString(R.string.maisVendidos), 0)
         }
 
         // Categorias
@@ -48,6 +42,8 @@ class FragMain : Fragment() {
         {
            // fragmento.containerCategorias.removeAllViews()
             var teste: String = ""
+
+            var categoriaID: Int = 0
 
             val cat =  inflater.inflate(R.layout.maincategoria, containerCategorias, false)
 
@@ -84,7 +80,7 @@ class FragMain : Fragment() {
             cat.btnCategoriaMain.text = teste
 
             cat.btnCategoriaMain.setOnClickListener {
-                this.listaProdutos( teste )
+                this.listaProdutos( "categoria", teste, categoriaID )
             }
 
             fragmento.containerCategorias.addView( cat )
@@ -96,7 +92,15 @@ class FragMain : Fragment() {
             val lancamentos =  inflater.inflate(R.layout.lancamentos_mais_vendidos_produto, containerLancamentos, false)
 
             lancamentos.imgLancamentosMaisVendidosProduto.setImageResource(R.drawable.advancewars)
+            lancamentos.imgLancamentosMaisVendidosProduto.setOnClickListener {
+                this.abrirProduto(0)
+            }
+
             lancamentos.tvLancamentosMaisVendidosProdutoTitulo.text = "Advance Wars 3"
+            lancamentos.tvLancamentosMaisVendidosProdutoTitulo.setOnClickListener {
+                this.abrirProduto(0)
+            }
+
             lancamentos.tvLancamentosMaisVendidosProdutoPreco.text = "R$350,00"
 
             fragmento.containerLancamentos.addView(lancamentos)
@@ -110,7 +114,15 @@ class FragMain : Fragment() {
             val maisVendidos = inflater.inflate(R.layout.lancamentos_mais_vendidos_produto, containerMaisVendidos, false)
 
             maisVendidos.imgLancamentosMaisVendidosProduto.setImageResource(R.drawable.bleach_blade_battlers_2)
+            maisVendidos.imgLancamentosMaisVendidosProduto.setOnClickListener {
+                this.abrirProduto(0)
+            }
+
             maisVendidos.tvLancamentosMaisVendidosProdutoTitulo.text = "Bleach Battlers 2"
+            maisVendidos.tvLancamentosMaisVendidosProdutoTitulo.setOnClickListener {
+                this.abrirProduto(0)
+            }
+
             maisVendidos.tvLancamentosMaisVendidosProdutoPreco.text = "R$119,00"
 
             fragmento.containerMaisVendidos.addView(maisVendidos)
@@ -123,14 +135,21 @@ class FragMain : Fragment() {
     }
 
     // Carregar listagem de produtos, adaptar para depois carregar dependendo de quem chamou (lista de produtos, lançamentos ou mais vendidos)
-    fun listaProdutos(tipoOrigem: String)
+    fun listaProdutos(tipoOrigem: String, origemDescricao: String,  origem: Int)
     {
-        val frag = listProdFrag.newInstance( tipoOrigem )
+        val frag = ProdutoListaFragment.newInstance( tipoOrigem, origemDescricao, origem )
         activity?.supportFragmentManager?.beginTransaction()?.replace(R.id.fragContainer, frag)?.commit()
+    }
+
+    // Abrir intent produto
+    fun abrirProduto( produtoID: Int )
+    {
+        val i = Intent(activity, ProdutoActivity::class.java)
+        startActivity(i)
     }
 
     companion object {
         @JvmStatic
-        fun newInstance() = FragMain()
+        fun newInstance() = MainFragment()
     }
 }

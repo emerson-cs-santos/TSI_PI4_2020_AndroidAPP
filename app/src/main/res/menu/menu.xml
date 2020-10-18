@@ -5,12 +5,57 @@
         <item
             android:id="@+id/principal"
             android:icon="@drawable/home"
+            android:checkable="false"
+            android:visible="true"
             android:title="@string/home" />
+
         <item
             android:id="@+id/jogos"
-            android:checkable="false"
             android:icon="@drawable/videogames"
-            android:title="@string/jogos"
-            android:visible="true" />
+            android:checkable="false"
+            android:visible="true"
+            android:title="@string/jogos"/>
+
+        <item
+            android:id="@+id/plataformas"
+            android:icon="@drawable/plataformas"
+            android:checkable="false"
+            android:visible="true"
+            android:title="@string/plataformas"/>
+
+        <item
+            android:id="@+id/lancamentos"
+            android:icon="@drawable/lancamentos"
+            android:checkable="false"
+            android:visible="true"
+            android:title="@string/lancamentos" />
+
+        <item
+            android:id="@+id/maisvendidos"
+            android:icon="@drawable/maisvendidos"
+            android:checkable="false"
+            android:visible="true"
+            android:title="@string/maisVendidos" />
+
+        <item
+            android:id="@+id/carrinho"
+            android:icon="@drawable/carrinho"
+            android:checkable="false"
+            android:visible="true"
+            android:title="@string/carrinho" />
+
+        <item
+            android:id="@+id/conta"
+            android:icon="@drawable/conta"
+            android:checkable="false"
+            android:visible="true"
+            android:title="@string/conta" />
+
+        <item
+            android:id="@+id/sobre"
+            android:icon="@drawable/sobre"
+            android:checkable="false"
+            android:visible="true"
+            android:title="@string/sobre" />
     </group>
 </menu>

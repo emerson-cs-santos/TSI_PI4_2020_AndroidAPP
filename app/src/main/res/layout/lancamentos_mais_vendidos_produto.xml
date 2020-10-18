@@ -22,7 +22,9 @@
             android:id="@+id/imgLancamentosMaisVendidosProduto"
             android:layout_width="120dp"
             android:layout_height="120dp"
-            android:layout_weight="1" />
+            android:layout_weight="1"
+            android:clickable="true"
+            android:focusable="true"/>
 
         <TextView
             android:id="@+id/tvLancamentosMaisVendidosProdutoTitulo"
@@ -32,7 +34,9 @@
             android:text="Titulo Jogo"
             android:textAlignment="center"
             android:textSize="18sp"
-            android:textStyle="bold" />
+            android:textStyle="bold"
+            android:clickable="true"
+            android:focusable="true"/>
 
         <TextView
             android:id="@+id/tvLancamentosMaisVendidosProdutoPreco"
