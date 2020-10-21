@@ -3,7 +3,7 @@
 
     <string name="open">Abrir menu</string>
     <string name="close">Fechar Menu</string>
-    <!-- TODO: Remove or change this placeholder text -->
+
     <string name="home">Principal</string>
     <string name="jogos">Jogos</string>
     <string name="plataformas">Plataformas</string>
@@ -21,7 +21,17 @@
     <string name="editarPerfil">Editar Perfil</string>
     <string name="trocarSenha">Trocar Senha</string>
     <string name="sobre">Sobre</string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
-    <!-- TODO: Remove or change this placeholder text -->
+    <string name="email">E-mail</string>
+    <string name="senha">Senha</string>
+    <string name="entrar">Entrar</string>
+    <string name="naoTemCadastro">Não tem cadastro?</string>
+    <string name="Cadastre_se">Cadastre-se</string>
+    <string name="efetuarCadastro">Efetuar cadastro</string>
+    <string name="nome">Nome</string>
+    <string name="confirmarSenha">Confirmar Senha</string>
+    <string name="criarCadastro">Criar cadastro</string>
+    <string name="salvarAlteracoes">Salvar Alterações</string>
+    <string name="senhaAtual">Senha atual</string>
+    <string name="novaSenha">Nova senha</string>
+    <string name="pedidos">Pedidos:</string>
 </resources>

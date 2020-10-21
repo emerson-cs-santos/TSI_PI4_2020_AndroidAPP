@@ -1,5 +1,6 @@
 package br.emerson.pi4
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -16,6 +17,16 @@ class PerfilFragment : Fragment() {
         val fragmento = inflater.inflate(R.layout.fragment_perfil, container, false)
 
         fragmento.tvPerfilUsuarioNome.text = "Zero"
+
+        fragmento.btnPerfilUsuarioEditarPerfil.setOnClickListener {
+            val i = Intent(activity, EditarUsuarioActivity::class.java)
+            startActivity(i)
+        }
+
+        fragmento.btnPerfilUsuarioTrocarSenha.setOnClickListener {
+            val i = Intent(activity, TrocarSenhaActivity::class.java)
+            startActivity(i)
+        }
 
         for ( x in 0..10 )
         {
