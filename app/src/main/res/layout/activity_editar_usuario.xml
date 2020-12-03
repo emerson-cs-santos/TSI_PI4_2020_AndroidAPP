@@ -56,10 +56,11 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="18dp"
-                android:text="@string/salvarAlteracoes"
                 android:backgroundTint="#FFB74D"
+                android:text="@string/salvarAlteracoes"
                 android:textAllCaps="false"
-                android:textColor="#FFFFFF" />
+                android:textColor="#FFFFFF"
+                android:textSize="18sp" />
         </LinearLayout>
     </ScrollView>
 </androidx.constraintlayout.widget.ConstraintLayout>

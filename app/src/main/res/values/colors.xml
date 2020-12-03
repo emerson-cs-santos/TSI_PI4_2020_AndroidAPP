@@ -3,4 +3,5 @@
     <color name="colorPrimary">#FFB74D</color>
     <color name="colorPrimaryDark">#FFFF9700</color>
     <color name="colorAccent">#03DAC5</color>
+    <color name="estoqueIndisponivel">#c23b1d</color>
 </resources>

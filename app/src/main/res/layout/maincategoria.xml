@@ -19,6 +19,7 @@
             android:backgroundTint="#FFB74D"
             android:text="Button"
             android:textAllCaps="false"
-            android:textColor="#FFFFFF" />
+            android:textColor="#FFFFFF"
+            android:textSize="18sp" />
     </LinearLayout>
 </androidx.cardview.widget.CardView>

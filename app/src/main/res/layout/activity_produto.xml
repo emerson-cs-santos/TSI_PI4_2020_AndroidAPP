@@ -21,18 +21,26 @@
             android:gravity="center"
             android:orientation="vertical">
 
+            <ProgressBar
+                android:id="@+id/progressBarProduto"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:indeterminate="true" />
+
             <ImageView
                 android:id="@+id/imgProduto"
-                android:layout_width="200dp"
-                android:layout_height="200dp"
-                tools:srcCompat="@drawable/splash" />
+                android:layout_width="250dp"
+                android:layout_height="250dp"
+                app:srcCompat="@drawable/produto_sem_imagem"
+                tools:srcCompat="@drawable/produto_sem_imagem" />
 
             <TextView
                 android:id="@+id/tvProdutoNome"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
-                android:text="Nome Jogo"
+                android:text="@string/carregando"
                 android:textSize="24sp"
                 android:textStyle="bold" />
 
@@ -41,7 +49,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
-                android:text="Plataforma"
+                android:text="@string/carregando"
                 android:textSize="18sp" />
 
             <LinearLayout
@@ -55,14 +63,16 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="R$162,00" />
+                    android:text="R$???,00"
+                    android:textSize="24sp" />
 
                 <TextView
                     android:id="@+id/tvProdutoPreco"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="R$129,00" />
+                    android:text="R$???,00"
+                    android:textSize="24sp" />
             </LinearLayout>
 
             <LinearLayout
@@ -75,23 +85,27 @@
                     android:id="@+id/tvProdutoDescricao"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla" />
+                    android:text="@string/carregando" />
 
                 <TextView
                     android:id="@+id/tvProdutoEstoqueStatus"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="20dp"
-                    android:text="Em estoque!"
-                    android:textAlignment="center" />
+                    android:text="@string/carregando"
+                    android:textAlignment="center"
+                    android:textSize="18sp" />
 
                 <Button
-                    android:id="@+id/button"
+                    android:id="@+id/btnProdutoAddCarrinho"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="10dp"
-                    android:text="Adicionar ao Carrinho"
-                    android:textAllCaps="false" />
+                    android:backgroundTint="#FFB74D"
+                    android:text="@string/addCarrinho"
+                    android:textAllCaps="false"
+                    android:textColor="#FFFFFF"
+                    android:textSize="18sp" />
             </LinearLayout>
 
         </LinearLayout>

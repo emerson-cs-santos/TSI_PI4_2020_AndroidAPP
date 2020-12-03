@@ -57,5 +57,12 @@
             android:checkable="false"
             android:visible="true"
             android:title="@string/sobre" />
+
+        <item
+            android:id="@+id/sair"
+            android:checkable="false"
+            android:icon="@drawable/sair"
+            android:title="@string/sair"
+            android:visible="true" />
     </group>
 </menu>

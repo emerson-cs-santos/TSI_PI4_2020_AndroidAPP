@@ -7,6 +7,16 @@
     android:layout_margin="16dp"
     tools:context=".CarrinhoFragment" >
 
+    <ProgressBar
+        android:id="@+id/progressBarCarrinho"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:indeterminate="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
     <TextView
         android:id="@+id/textView3"
         android:layout_width="0dp"
@@ -19,8 +29,9 @@
         android:textSize="24sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/progressBarCarrinho" />
 
     <androidx.cardview.widget.CardView
         android:id="@+id/cardView"
@@ -30,6 +41,7 @@
         app:cardCornerRadius="5dp"
         app:cardElevation="5dp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView3">
 
@@ -38,7 +50,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="8dp"
-            android:text="Total: R$9999,00"
+            android:text="Total: R$0,00"
             android:textAlignment="center"
             android:textSize="18sp"
             android:textStyle="bold" />
@@ -48,13 +60,15 @@
         android:id="@+id/btnCarrinhoFinalizar"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_weight="1"
         android:layout_marginTop="8dp"
+        android:layout_weight="1"
         android:backgroundTint="#FFB74D"
-        android:textColor="#FFFFFF"
         android:text="@string/finalizarCompra"
         android:textAllCaps="false"
+        android:textColor="#FFFFFF"
+        android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/cardView" />
 

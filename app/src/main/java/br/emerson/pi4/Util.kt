@@ -1,7 +1,9 @@
 package br.emerson.pi4
 
-import android.app.Application
 import android.content.Context
+import android.graphics.Bitmap
+import android.graphics.BitmapFactory
+import android.util.Base64
 import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
 
@@ -28,11 +30,35 @@ class controleSessao
         return Sessao.UserID == 0
     }
 
-    fun criarSessao(): Boolean
+    fun criarSessao(id: Int, token: String, name: String, email: String)
     {
-        Sessao.UserID = 56
-
-        return true
+        Sessao.UserID       = id
+        Sessao.UserToken    = token
+        Sessao.UserName     = name
+        Sessao.UserEmail    = email
     }
 
+    fun resetarSessao()
+    {
+        Sessao.UserID       = 0
+        Sessao.UserToken    = ""
+        Sessao.UserName     = ""
+        Sessao.UserEmail    = ""
+    }
+}
+
+fun converterBase64( imageString: String ): Bitmap
+{
+    var base64String = imageString
+
+    base64String = base64String.replace("data:image/jpeg;base64,","")
+    val imageBytes = Base64.decode(base64String, Base64.DEFAULT)
+    val decodedImageBitmap = BitmapFactory.decodeByteArray(imageBytes, 0, imageBytes.size)
+
+    return decodedImageBitmap
+}
+
+fun mascaraValor( valorString: String): String
+{
+    return "R$" + valorString.replace(".",",")
 }

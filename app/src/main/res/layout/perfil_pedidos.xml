@@ -20,10 +20,11 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
             android:orientation="horizontal">
 
             <TextView
-                android:id="@+id/textView14"
+                android:id="@+id/tvPerfilPedidosPedido"
                 android:layout_width="5dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -45,11 +46,19 @@
                 android:layout_weight="1"
                 android:text="@string/data"
                 android:textAlignment="viewStart" />
+
+            <TextView
+                android:id="@+id/textView14"
+                android:layout_width="5dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/acao" />
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
             android:layout_marginTop="5dp"
             android:orientation="horizontal">
 
@@ -58,7 +67,7 @@
                 android:layout_width="5dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="125"
+                android:text="000"
                 android:textAlignment="viewStart" />
 
             <TextView
@@ -66,7 +75,7 @@
                 android:layout_width="5dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="R$129,00"
+                android:text="R$00,00"
                 android:textAlignment="viewStart"
                 android:textColor="#3F51B5" />
 
@@ -75,8 +84,20 @@
                 android:layout_width="5dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:text="12/08/2020"
+                android:text="dia/mes/ano"
                 android:textAlignment="viewStart" />
+
+            <TextView
+                android:id="@+id/tvPerfilPedidosVerItens"
+                android:layout_width="5dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/verItens"
+                android:textColor="#FFB74D"
+                android:clickable="true"
+                android:focusable="true"
+                android:textStyle="bold" />
+
         </LinearLayout>
     </LinearLayout>
 
